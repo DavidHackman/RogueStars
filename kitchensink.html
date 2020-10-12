@@ -1,0 +1,239 @@
+
+<div class="main">
+
+<!-- LOGO SECTION -->
+  <div class="logo section"></div>
+
+<!-- NAME SECTION -->
+
+<label>Initiative</label>
+<button type="roll" name="roll_init" value="/roll 1d10 &{tracker} Initiative"></button>
+</div>
+
+
+<center><h1> SIMONS CLUSTERFUDGE CHARACTER SHEET, MK69 </h1></center>
+<div><label></label></div>
+<div class="sheet-3colrow">
+    <div class="sheet-col">
+        <label>Name:</label><input type="text" name="attr_name" />
+        <label>Player:</label><input type="text" name="attr_player" />
+        <label>Race:</label><input type="text" name="attr_race" />
+    </div>
+    <div class="sheet-col">
+        <label>Mark:</label><input type="text" name="attr_mark" />
+        <label>Size:</label><input type="text" name="attr_size" />
+        
+    </div>
+    <div class="sheet-col">
+        <label>XP:</label><input type="text" name="attr_xp" />
+        <label>CREDS:</label><input type="text" name="attr_creds" />
+        
+    </div>
+</div>
+
+
+<div><label></label></div>
+<div><label></label></div>
+<div><label></label></div>
+
+ 
+
+<!-- POOLS SECTION -->
+ <div class="stat-block flex-center">
+      <label>HIT POINTS</label>
+      <input name="attr_hit_points" type="number" value="">
+      <input name="attr_hit_points_max" type="number" value="">
+    </div>
+
+<div><label></label></div><div><label></label></div><div><label></label></div>
+
+<!-- MAIN STAT SECTION -->
+	<h2>Core Stats</h2>
+  <div class="stats section">
+    <div class="stat-block flex-center">
+      <label>MOVE</label>
+      <input name="attr_move" type="number" value="6">
+    </div>
+
+    <div class="stat-block flex-center">
+      <label>MELEE</label>
+      <input name="attr_melee" type="number" value="">
+	  <label>MELEE MODIFIER</label>
+      <input name="attr_melee_mod" type="number" value="">
+	  <input type="hidden" name="attr_melee_total" value="[[@{melee}-(@{melee_mod})]]"  disabled="true" />
+    </div>
+
+    <div class="stat-block flex-center">
+      <label>RANGE</label>
+      <input name="attr_range" type="number" value="">
+	  <label>RANGED MODIFIER</label>
+      <input name="attr_range_mod" type="number" value="">
+	  <input type="hidden" name="attr_range_total" value="[[@{range}-(@{range_mod})]]"  disabled="true" />
+    </div>
+
+    <div class="stat-block flex-center">
+      <label>TOUGHNESS</label>
+      <input name="attr_toughness" type="number" value="">
+    </div>
+
+    <div class="stat-block flex-center">
+      <label>WILLPOWER</label>
+      <input name="attr_willpower" type="number" value="">
+    </div>
+
+   
+   
+  </div>
+<div><label></label></div>
+	<div><label></label></div>
+	<div><label></label></div>
+	<div><label></label></div>
+
+
+  <!-- CLIPS SECTION -->
+  <div class="stat-block flex-center">
+  <label>PEN Clip Loaded</label><input type="checkbox" name="attr_pen_loaded" value="1"  /></div>
+  <label>DAM Clip Loaded</label><input type="checkbox" name="attr_dam_loaded" value="1"  />
+  
+ <!-- ATTACKS SECTION --> 
+ 
+ 	<h2>Attacks</h2>
+<div class="attacks section flex-center flex-middle flex-down">
+      <label></label>
+	  <lh3>---------ATTACK NAME---------SHORT---MED---LONG---TOTAL---MAX----DAM----PEN</h3>
+     
+    </div>
+  
+<div class="stat-block flex-center">
+      <label>MELEE ATTACK 1</label>
+      <input name="attr_attack_1_name" type="text" value="Slap">
+	  <input name="attr_attack_1_short" type="number" value="">
+	  <input name="attr_attack_1_med" type="number" value="">
+	  <input name="attr_attack_1_long" type="number" value="">
+      <input name="attr_attack_1_max_dice" type="number" value="">
+	  <input name="attr_attack_1_hit_dice" type="number" value="">
+	  <input name="attr_attack_1_dam" type="number" value="">
+	  <input name="attr_attack_1_pen" type="number" value="">
+	  <button name="roll_to_hit" type="roll" value="&{template:default} {{name=@{name}'s TO HIT: @{attack_1_name}}} {{note= Max Hits is @{attack_1_hit_dice}, PEN is @{attack_1_pen}, Damage per hit is @{attack_1_dam}}} {{Result=[[@{attack_1_max_dice}d10>@{melee_total}]]}}"></button>
+    </div>
+	
+	<div class="stat-block flex-center">
+      <label>MELEE ATTACK 2</label>
+      <input name="attr_attack_2_name" type="text" value="Punch">
+	  <input name="attr_attack_2_short" type="number" value="">
+	  <input name="attr_attack_2_med" type="number" value="">
+	  <input name="attr_attack_2_long" type="number" value="">
+      <input name="attr_attack_2_max_dice" type="number" value="">
+	  <input name="attr_attack_2_hit_dice" type="number" value="">
+	  <input name="attr_attack_2_dam" type="number" value="">
+	  <input name="attr_attack_2_pen" type="number" value="">
+	  <button name="roll_to_hit" type="roll" value="&{template:default} {{name=@{name}'s TO HIT: @{attack_2_name}}} {{note= Max Hits is @{attack_2_hit_dice}, PEN is @{attack_2_pen}, Damage per hit is @{attack_2_dam}}} {{Result=[[@{attack_2_max_dice}d10>@{melee_total}]]}}"></button>
+    </div>
+	
+	<div class="stat-block flex-center">
+      <label>MELEE ATTACK 3</label>
+      <input name="attr_attack_3_name" type="text" value="Smoosh">
+	  <input name="attr_attack_3_short" type="number" value="">
+	  <input name="attr_attack_3_med" type="number" value="">
+	  <input name="attr_attack_3_long" type="number" value="">
+      <input name="attr_attack_3_max_dice" type="number" value="">
+	  <input name="attr_attack_3_hit_dice" type="number" value="">
+	  <input name="attr_attack_3_dam" type="number" value="">
+	  <input name="attr_attack_3_pen" type="number" value="">
+	  <button name="roll_to_hit" type="roll" value="&{template:default} {{name=@{name}'s TO HIT: @{attack_3_name}}} {{note= Max Hits is @{attack_3_hit_dice}, PEN is @{attack_3_pen}, Damage per hit is @{attack_3_dam}}} {{Result=[[@{attack_3_max_dice}d10>@{melee_total}]]}}"></button>
+    </div>
+
+<div class="stat-block flex-center">
+      <label>RANGED ATTACK 1</label>
+      <input name="attr_rattack_1_name" type="text" value="Shoot">
+	  <input name="attr_rattack_1_short" type="number" value="">
+	  <input name="attr_rattack_1_med" type="number" value="">
+	  <input name="attr_rattack_1_long" type="number" value="">
+      <input name="attr_rattack_1_max_dice" type="number" value="">
+	  <input name="attr_rattack_1_hit_dice" type="number" value="">
+	  <input name="attr_rattack_1_dam" type="number" value="">
+	  <input name="attr_rattack_1_pen" type="number" value="">
+	  <button name="roll_to_hit" type="roll" value="&{template:default} {{name=@{name}'s TO HIT: @{rattack_1_name}}} {{note= Max Hits is @{rattack_1_hit_dice}, PEN is [[@{rattack_1_pen}+ @{pen_loaded}]], Damage per hit is [[@{rattack_1_dam}+ @{dam_loaded}]]}} {{Result=[[@{rattack_1_max_dice}d10>@{range_total}]]}}"></button>
+    </div>
+	
+	<div class="stat-block flex-center">
+      <label>RANGED ATTACK 2</label>
+      <input name="attr_rattack_2_name" type="text" value="Snipe">
+	  <input name="attr_rattack_2_short" type="number" value="">
+	  <input name="attr_rattack_2_med" type="number" value="">
+	  <input name="attr_rattack_2_long" type="number" value="">
+      <input name="attr_rattack_2_max_dice" type="number" value="">
+	  <input name="attr_rattack_2_hit_dice" type="number" value="">
+	  <input name="attr_rattack_2_dam" type="number" value="">
+	  <input name="attr_rattack_2_pen" type="number" value="">
+	  <button name="roll_to_hit" type="roll" value="&{template:default} {{name=@{name}'s TO HIT: @{rattack_2_name}}} {{note= Max Hits is @{rattack_2_hit_dice}, PEN is [[@{rattack_2_pen}+ @{pen_loaded}]], Damage per hit is [[@{rattack_2_dam}+ @{dam_loaded}]]}} {{Result=[[@{rattack_2_max_dice}d10>@{range_total}]]}}"></button>
+    </div>
+	
+	<div class="stat-block flex-center">
+      <label>RANGED ATTACK 3</label>
+      <input name="attr_rattack_3_name" type="text" value="Cannon">
+	  <input name="attr_rattack_3_short" type="number" value="">
+	  <input name="attr_rattack_3_med" type="number" value="">
+	  <input name="attr_rattack_3_long" type="number" value="">
+      <input name="attr_rattack_3_max_dice" type="number" value="">
+	  <input name="attr_rattack_3_hit_dice" type="number" value="">
+	  <input name="attr_rattack_3_dam" type="number" value="">
+	  <input name="attr_rattack_3_pen" type="number" value="">
+	  <button name="roll_to_hit" type="roll" value="&{template:default} {{name=@{name}'s TO HIT: @{rattack_3_name}}} {{note= Max Hits is @{rattack_3_hit_dice}, PEN is [[@{rattack_3_pen}+ @{pen_loaded}]], Damage per hit is [[@{rattack_3_dam}+ @{dam_loaded}]]}} {{Result=[[@{rattack_3_max_dice}d30>@{range_total}]]}}"></button>
+    </div>
+	
+	<div class="stat-block flex-center">
+      <label>RANGED ATTACK SPECIAL</label>
+      <input name="attr_rattack_4_name" type="text" value="Clips Don't Affect This">
+	  <input name="attr_rattack_4_short" type="number" value="">
+	  <input name="attr_rattack_4_med" type="number" value="">
+	  <input name="attr_rattack_4_long" type="number" value="">
+      <input name="attr_rattack_4_max_dice" type="number" value="">
+	  <input name="attr_rattack_4_hit_dice" type="number" value="">
+	  <input name="attr_rattack_4_dam" type="number" value="">
+	  <input name="attr_rattack_4_pen" type="number" value="">
+	  <button name="roll_to_hit" type="roll" value="&{template:default} {{name=@{name}'s TO HIT: @{rattack_4_name}}} {{note= Max Hits is @{rattack_4_hit_dice}, PEN is @{rattack_4_pen}, Damage per hit is @{rattack_4_dam}}} {{Result=[[@{rattack_4_max_dice}d40>@{range_total}]]}}"></button>
+    </div>
+
+	<div><label></label></div>
+	<div><label></label></div>
+	<div><label></label></div>
+	<div><label></label></div>
+
+
+<!-- FATE CARDS SECTION -->
+
+
+
+	<h2>Fate Cards</h2>
+<fieldset class="repeating_skills"> 
+  <div class="stat-block flex-center">
+      <label>Fate Card </label>
+	  <input name="attr_fate_name_1" type="text" value="Dodge">
+      <input name="attr_fate_current_1" type="number" value="">
+      <input name="attr_fate_max_1" type="number" value="">
+    </div>
+</fieldset>
+
+ 
+
+
+<!-- SKILLS SECTION -->
+ 
+	
+	<h2>Skills</h2>
+<fieldset class="repeating_skills"> 
+  <label>Skill Card </label>
+	  <input name="attr_skill_name_1" type="text" value="Charm">
+      <input name="attr_skill_rating_1" type="number" value="">
+      <button name="Skill_roll" type="roll" value="&{template:default} {{name=Skill Roll: @{skill_name_1}}} {{note=}} {{Result=[[d10 + @{skill_rating_1}]]}}"></button>
+    </div>
+</fieldset>
+
+<!-- NOTES SECTION -->
+  <div class="notes section flex-center flex-down">
+    <label>Notes</label>
+    <textarea name="attr_notes" placeholder="Notes"></textarea>
+  </div>
+
+
